@@ -1,0 +1,437 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("../font/Gilroy-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("../font/Gilroy-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("../font/Gilroy-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Gilroy-Light", sans-serif;
+  font-size: 19px;
+  color: #fff;
+  line-height: 38px;
+  background: radial-gradient(ellipse at center, #3b3b3b 0%, #181717 100%); }
+
+a {
+  color: #ff4f00; }
+
+a:hover {
+  text-decoration: none; }
+
+.wrapper {
+  max-width: 1680px;
+  max-height: 1100px;
+  position: relative;
+  margin: auto; }
+  .wrapper header {
+    position: absolute;
+    margin-top: 50px;
+    left: 0;
+    width: 100%; }
+    @media (min-width: 1280px) {
+      .wrapper header {
+        padding: 60px;
+        margin: 0; } }
+    .wrapper header a.logo {
+      background: url(../images/logo.png) no-repeat;
+      display: block;
+      width: 413px;
+      height: 54px;
+      margin: auto; }
+      @media (min-width: 1280px) {
+        .wrapper header a.logo {
+          margin: 2px; } }
+    .wrapper header .icon-search {
+      width: 27px;
+      height: 28px;
+      background: url(../svg/search-icon.svg);
+      display: none; }
+      @media (min-width: 1280px) {
+        .wrapper header .icon-search {
+          display: block;
+          position: absolute;
+          right: 95px;
+          top: 55px;
+          z-index: 1; } }
+      .wrapper header .icon-search:hover {
+        cursor: pointer; }
+      @media (min-width: 1680px) {
+        .wrapper header .icon-search {
+          right: 150px; } }
+  .wrapper .navigation-wrapper .navigation {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 104px);
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(255, 79, 0, 0.95);
+    align-items: center;
+    padding: 100px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    visibility: hidden; }
+    .wrapper .navigation-wrapper .navigation a {
+      font-family: "Gilroy-Light", sans-serif;
+      font-size: 19px;
+      color: #fff;
+      text-decoration: none; }
+      .wrapper .navigation-wrapper .navigation a:hover {
+        text-decoration: underline; }
+  .wrapper .navigation-wrapper label {
+    width: 75px;
+    height: 71px;
+    background: transparent;
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 37.5px);
+    z-index: 9999;
+    cursor: pointer; }
+    @media (min-width: 1280px) {
+      .wrapper .navigation-wrapper label {
+        top: 33px;
+        right: 0;
+        left: inherit; } }
+    @media (min-width: 1680px) {
+      .wrapper .navigation-wrapper label {
+        right: 57px; } }
+    .wrapper .navigation-wrapper label:before, .wrapper .navigation-wrapper label:after {
+      content: "";
+      position: absolute;
+      width: 46px;
+      height: 3px;
+      top: 27px;
+      right: 14px;
+      background: #ff4f00;
+      transition: all 0.3s linear; }
+      @media (min-width: 1280px) {
+        .wrapper .navigation-wrapper label:before, .wrapper .navigation-wrapper label:after {
+          right: 3px; } }
+    .wrapper .navigation-wrapper label:after {
+      top: initial;
+      bottom: 27px; }
+      @media (min-width: 1280px) {
+        .wrapper .navigation-wrapper label:after {
+          width: 36px; } }
+  .wrapper .navigation-wrapper input[type="checkbox"]:checked ~ ul {
+    visibility: visible;
+    opacity: 1; }
+    @media (min-width: 1280px) {
+      .wrapper .navigation-wrapper input[type="checkbox"]:checked ~ ul {
+        z-index: 1;
+        right: 0;
+        left: inherit;
+        width: 61%; } }
+    @media (min-width: 1680px) {
+      .wrapper .navigation-wrapper input[type="checkbox"]:checked ~ ul {
+        width: 50%;
+        max-height: 982px; } }
+  .wrapper input[type="checkbox"] {
+    display: none; }
+  .wrapper input[type="checkbox"]:checked + label:before,
+  .wrapper input[type="checkbox"]:checked + label:after {
+    top: 35.5px;
+    transition: all 0.3s linear;
+    background: #fff; }
+  .wrapper input[type="checkbox"]:checked + label:before {
+    transform: rotate(45deg); }
+  .wrapper input[type="checkbox"]:checked + label:after {
+    transform: rotate(-45deg); }
+    @media (min-width: 1280px) {
+      .wrapper input[type="checkbox"]:checked + label:after {
+        width: 46px; } }
+
+main {
+  overflow: hidden; }
+  @media (min-width: 1280px) {
+    main {
+      display: flex; } }
+  @media (min-width: 1680px) {
+    main {
+      max-height: 1100px; } }
+  main .main-image {
+    background: url(../images/PorscheSinger911-small.jpg) no-repeat;
+    background-size: auto;
+    min-height: 100vh; }
+    @media (min-width: 501px) {
+      main .main-image {
+        background: url(../images/PorscheSinger911-big.jpg) no-repeat;
+        background-size: cover; } }
+    @media (min-width: 1280px) {
+      main .main-image {
+        width: 39%; } }
+    @media (min-width: 1680px) {
+      main .main-image {
+        width: 39%;
+        width: 50%;
+        background-size: auto; } }
+  main .arrow-down {
+    background-image: url(../svg/arrow-down.svg);
+    width: 45px;
+    height: 24px;
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 22.5px); }
+    @media (min-width: 1280px) {
+      main .arrow-down {
+        display: none; } }
+  main .info-wrapper {
+    background: linear-gradient(to bottom, rgba(255, 79, 0, 0) 50%, rgba(255, 79, 0, 0.2) 100%), url(../images/bg-card-small-info.png);
+    min-height: 100vh;
+    position: relative;
+    border-bottom: 135px solid #ff4f00; }
+    @media (min-width: 1280px) {
+      main .info-wrapper {
+        width: 61%; } }
+    @media (min-width: 1680px) {
+      main .info-wrapper {
+        width: 50%;
+        border-bottom: 155px solid #ff4f00; } }
+    main .info-wrapper .container {
+      padding: 50px;
+      max-width: 600px; }
+      @media (min-width: 1280px) {
+        main .info-wrapper .container {
+          padding: 119px;
+          max-width: 800px; } }
+    main .info-wrapper .subtitle {
+      font-family: "Gilroy-SemiBold", sans-serif;
+      font-size: 16px;
+      color: #fff;
+      text-transform: uppercase;
+      color: #8d8d8d;
+      margin-bottom: 19px;
+      line-height: 16px;
+      letter-spacing: 9.5px; }
+      main .info-wrapper .subtitle :last-child {
+        color: #ff4f00; }
+  main .title {
+    position: relative;
+    font-family: "Gilroy-Light", sans-serif;
+    font-size: 63px;
+    color: #fff;
+    line-height: 85px;
+    margin-bottom: 30px; }
+    @media (min-width: 1280px) {
+      main .title {
+        font-size: 69px;
+        margin-left: -5px; } }
+    main .title:before {
+      content: "";
+      width: 7px;
+      height: 221px;
+      background: #ff4f00;
+      position: absolute;
+      top: 17px;
+      left: -50px; }
+      @media (min-width: 1280px) {
+        main .title:before {
+          left: -58px; } }
+    main .title strong {
+      font-family: "Gilroy-Bold", sans-serif;
+      line-height: 85px;
+      letter-spacing: -2px; }
+      @media (min-width: 1280px) {
+        main .title strong {
+          letter-spacing: -0.5px; } }
+  main .info-block {
+    margin-bottom: 61px; }
+    main .info-block p {
+      margin-bottom: 47px; }
+    main .info-block strong {
+      font-family: "Gilroy-SemiBold", sans-serif; }
+  main a.button {
+    font-family: "Gilroy-Bold", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    background-color: rgba(255, 79, 0, 0.1);
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.25);
+    border: 3px solid #ff4f00;
+    min-width: 250px;
+    padding: 12px 66px;
+    text-decoration: none;
+    letter-spacing: 8.4px;
+    text-align: center;
+    transition: all 0.3s ease-in-out; }
+    main a.button:hover {
+      background-color: #ff4f00;
+      transition: all 0.3s ease-in; }
+  main .arrows {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    margin-bottom: 75px; }
+  main .gallery {
+    display: flex;
+    position: absolute;
+    bottom: -155px;
+    left: 0;
+    right: 0;
+    padding: 60px 50px; }
+    main .gallery .slide {
+      filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
+      transition: all 0.7s ease-out;
+      border-top: 10px solid transparent; }
+      main .gallery .slide:hover, main .gallery .slide.active {
+        transform: translateY(-15px);
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.6));
+        border-top: 10px solid #ff4f00; }
+      main .gallery .slide img {
+        display: block; }
+    @media (min-width: 1280px) {
+      main .gallery {
+        left: -172px;
+        bottom: -137px; } }
+    @media (min-width: 1680px) {
+      main .gallery {
+        left: -170px;
+        bottom: -155px; } }
