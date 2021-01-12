@@ -41,7 +41,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
+  font-family: "Quattrocento Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.7;
@@ -4109,7 +4109,7 @@ textarea.form-control-lg {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: var(--bs-font-sans-serif);
+  font-family: "Quattrocento Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.7;
@@ -4194,7 +4194,7 @@ textarea.form-control-lg {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: var(--bs-font-sans-serif);
+  font-family: "Quattrocento Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.7;
@@ -7366,8 +7366,6 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Quattrocento Sans', sans-serif; */
 *,
 *:before,
 *:after {
@@ -7385,7 +7383,7 @@ a {
 .title {
   text-transform: uppercase;
   color: #292f36;
-  font: 36px/42px "Quattrocento Sans";
+  font: 36px/42px "Quattrocento Sans", sans-serif;
   position: relative;
   margin-top: 104px;
   margin-bottom: 70px;
@@ -7410,18 +7408,28 @@ a {
     margin: auto 0; }
     .navbar .navbar-brand:hover {
       text-decoration: none; }
-  .navbar a {
-    text-decoration: none;
-    color: #a4aead;
-    border: 2px solid transparent;
-    padding: 4px 10px; }
-    .navbar a:hover {
-      border: 2px solid #5b6168;
-      border-radius: 4px; }
-    .navbar a:active, .navbar a.active {
-      border: 2px solid #23b7a4;
-      border-radius: 4px;
-      color: #23b7a4; }
+  .navbar .navigation {
+    font-size: 21px; }
+    .navbar .navigation li {
+      margin-bottom: 10px; }
+      .navbar .navigation li a {
+        text-decoration: none;
+        color: #a4aead;
+        border: 2px solid transparent;
+        padding: 4px 10px; }
+        .navbar .navigation li a:hover {
+          border: 2px solid #5b6168;
+          border-radius: 4px; }
+        .navbar .navigation li a:active, .navbar .navigation li a.active {
+          border: 2px solid #23b7a4;
+          border-radius: 4px;
+          color: #23b7a4; }
+  @media (min-width: 992px) {
+    .navbar .navigation {
+      font-size: 14px; }
+      .navbar .navigation li {
+        margin-bottom: 0;
+        margin-left: 16px; } }
 
 .advantages .item {
   margin-bottom: 40px;
@@ -7449,7 +7457,7 @@ a {
 
 .advantages .advantages-title {
   display: block;
-  font: 16px/18px "Quattrocento Sans", sans-serif;
+  font: 16px/18px "Quattrocento Sans", sans-serif, sans-serif;
   color: #292f36;
   text-transform: uppercase;
   margin-bottom: 18px; }
