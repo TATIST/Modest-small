@@ -26,7 +26,7 @@ a {
     font: 36px/42px "Quattrocento Sans";
     position: relative;
     margin-top: 104px;
-    margin-bottom: 85px;
+    margin-bottom: 70px;
     margin-left: 24px;
 
     &:before {
@@ -81,7 +81,8 @@ a {
 .advantages {
 
     .item {
-        margin-bottom: 73px;
+        margin-bottom: 40px;
+        padding: 15px;
     }
 
     .icon {
@@ -89,7 +90,7 @@ a {
         height: 48px;
         display: block;
         margin: auto;
-        margin-bottom: 33px;
+        margin-bottom: 32px;
     }
 
     .icon-gears {
@@ -113,7 +114,7 @@ a {
 
     .advantages-title {
         display: block;
-        font: 18px/18px "Quattrocento Sans",
+        font: 16px/18px "Quattrocento Sans",
             sans-serif;
         color: $baseColor;
         text-transform: uppercase;
