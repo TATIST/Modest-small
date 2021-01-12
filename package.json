@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.0.0-beta1",
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0",
-    "include-media": "^1.4.9"
+    "gulp-sass": "^4.1.0"
   }
 }

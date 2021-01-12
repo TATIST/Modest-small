@@ -1,5 +1,122 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif; */
+
 *,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+a {
+    color: $mainColor;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title {
+    text-transform: uppercase;
+    color: $baseColor;
+    font: 36px/42px "Quattrocento Sans";
+    position: relative;
+    margin-top: 104px;
+    margin-bottom: 85px;
+    margin-left: 24px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 35px;
+        background: #e1e6ea;
+        top: 0;
+        left: -23px;
+    }
+}
+
+.navbar {
+    background: #1d2126;
+    font: 600 14px/42px "Open Sans", sans-serif;
+    text-transform: uppercase;
+
+    .navbar-brand {
+        background: url(../images/modest-logo.png) no-repeat;
+        width: 102px;
+        height: 22px;
+        margin: auto 0;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+
+    a {
+        text-decoration: none;
+        color: #a4aead;
+        border: 2px solid transparent;
+        padding: 4px 10px;
+
+        &:hover {
+            border: 2px solid #5b6168;
+            border-radius: 4px;
+        }
+
+        &:active,
+        &.active {
+            border: 2px solid $mainColor;
+            border-radius: 4px;
+            color: $mainColor;
+        }
+    }
+
+}
+
+.advantages {
+
+    .item {
+        margin-bottom: 73px;
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+        display: block;
+        margin: auto;
+        margin-bottom: 33px;
+    }
+
+    .icon-gears {
+        background: url('../images/sprite.png') no-repeat -17px -12px;
+
+    }
+
+    .icon-pencil {
+        background: url('../images/sprite.png') no-repeat -75px -12px;
+    }
+
+    .icon-phone {
+        background: url('../images/sprite.png') no-repeat -143px -12px;
+        width: 30px;
+    }
+
+    .icon-time {
+        background: url('../images/sprite.png') no-repeat -192px -12px;
+    }
+
+
+    .advantages-title {
+        display: block;
+        font: 18px/18px "Quattrocento Sans",
+            sans-serif;
+        color: $baseColor;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+    }
 }
